@@ -46,6 +46,15 @@ function App() {
     generateJokeDev();
   }, [])
 
+  const generateJokeScience = () => {
+    fetch(API_URL + 'science')
+    .then(res => res.json())
+    .then(data => setJoke(data.value));
+  }
+  useEffect(() => {
+    generateJokeScience();
+  }, [])
+
   return (
     <div class="box">
     <img src = {chuck}/>
@@ -57,6 +66,7 @@ function App() {
     <button onClick={generateJokeCareer}>Career</button>
     <button onClick={generateJokeCelebrity}>Celebrity</button>
     <button onClick={generateJokeDev}>Dev</button>
+    <button onClick={generateJokeScience}>Science</button>
 
 
     </div>
@@ -64,16 +74,3 @@ function App() {
 }
 
 export default App;
-
-// <button onClick={generateJokeExplicit}>Explicit</button>
-// <button onClick={generateJokefashion}>Fashion</button>
-// <button onClick={generateJokeFood}>Food</button>
-// <button onClick={generateJokeHistory}>History</button>
-// <button onClick={generateJokeMoney}>Money</button>
-// <button onClick={generateJokeMovie}>Movie</button>
-// <button onClick={generateJokeMusic}>Music</button>
-// <button onClick={generateJokePolitical}>Political</button>
-// <button onClick={generateJokeReligion}>Religion</button>
-// <button onClick={generateJokeScience}>Science</button>
-// <button onClick={generateJokeSports}>Sports</button>
-// <button onClick={generateJokeTravel}>Travel</button>

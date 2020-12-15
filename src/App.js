@@ -124,7 +124,8 @@ function App() {
     <div class="box">
     <img src = {chuck}/>
     <h2>Chuck Norris Jokes</h2>
-    <h5>Click on any category to generate a joke from that category</h5>
+    <h4>Click on any category to generate a joke from that category</h4>
+    <h5>!!Make sure you are over 18 to click the explicit section!!</h5>
     <p>{joke}</p>
 
     <button onClick={generateJoke}>Animal</button>
